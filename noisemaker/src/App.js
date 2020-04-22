@@ -1,15 +1,16 @@
-import React from "react";
+import React, { Component } from "react";
 import "./App.css";
+import Piano from "./components/Piano";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <h2>Pianope</h2>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <h1>Pianope</h1>
+        <Piano />
+      </div>
+    );
+  }
 }
 
 export default App;
