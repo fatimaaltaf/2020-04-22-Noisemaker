@@ -5,19 +5,19 @@ import "./Piano.css";
 
 class Piano extends Component {
   playKey1() {
-    this.midiSounds.playChordNow(3, [60], 2.5);
+    this.midiSounds.playChordNow(2, [60], 2.5);
   }
 
   playKey2() {
-    this.midiSounds.playChordNow(3, [40], 2.5);
+    this.midiSounds.playChordNow(285, [60], 2.5);
   }
 
   playKey3() {
-    this.midiSounds.playChordNow(3, [20], 2.5);
+    this.midiSounds.playChordNow(2, [80], 2.5);
   }
 
   playKey4() {
-    this.midiSounds.playChordNow(3, [0], 2.5);
+    this.midiSounds.playChordNow(2, [90], 2.5);
   }
   render() {
     return (
@@ -25,16 +25,16 @@ class Piano extends Component {
         <div className="piano">
           <p>
             <button className="rectangle" onClick={this.playKey1.bind(this)}>
-              Play
+              Click me!
             </button>
             <button className="rectangle" onClick={this.playKey2.bind(this)}>
-              Play
+              Click me!
             </button>
             <button className="rectangle" onClick={this.playKey3.bind(this)}>
-              Play
+              Click me!
             </button>
             <button className="rectangle" onClick={this.playKey4.bind(this)}>
-              Play
+              Click me!
             </button>
           </p>
         </div>
@@ -43,7 +43,7 @@ class Piano extends Component {
           <MIDISounds
             ref={(ref) => (this.midiSounds = ref)}
             appElementName="root"
-            instruments={[3]}
+            instruments={[2, 285]}
           />
         </div>
       </div>
